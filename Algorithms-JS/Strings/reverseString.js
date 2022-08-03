@@ -25,3 +25,18 @@ function reverseStr2(inputStr) {
 }
 
 console.log(reverseStr2('Devil'));
+
+/** Reverse String without using the extra memory or array */
+
+ function reverseStr3(str){
+   let len = Math.floor(str.length/2);
+    for(let j=0;j<len;j++){
+        let temp = str[j];
+        str[j] = str[str.length-1-j];
+        str[str.length-1-j] = temp;
+    // [str[str.length-1-j], str[j]] = [str[j], str[str.length-1-j]]
+    }
+    return str;
+ }
+
+ console.log(reverseStr3(['H', 'E', 'L', 'L','O']))

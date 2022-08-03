@@ -1,5 +1,5 @@
-/** match pattern with string, time complexity O(N) and space complexity O(N)
- *  string iterates n times but pattrn iterates constant number of times
+/** match pattern with string, time complexity O(N * M) and space complexity O(N)
+ *  string iterates n times and pattrn iterates m times. 
  */
 
 
@@ -8,9 +8,6 @@ function patternCount(str, pattern) {
     for (let i = 0; i < str.length; i++) {
         for (let j = 0; j < pattern.length; j++) {
           if(pattern[j] !== str[i+j]){
-              // j (l) == i (0 + 0) l
-              // j (o) == i (0 + 1) o
-              // j (l) == i (0 + 2) l
             break;
           }
           if( j == pattern.length-1){

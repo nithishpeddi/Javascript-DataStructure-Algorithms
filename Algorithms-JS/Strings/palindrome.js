@@ -2,7 +2,7 @@
  * Time Complexity O(N) && space complexity O(N)
  */
   
-function isPolindrome(str) {
+function isPalindrome(str) {
     let len = Math.floor(str.length / 2);
     for (let i = 0; i < len; i++) {
          if(str[i] == str[str.length-1-i]){
@@ -12,4 +12,4 @@ function isPolindrome(str) {
     return false;
 }
 
-console.log(isPolindrome('MADAM'));
+console.log(isPalindrome('MADAM'));
